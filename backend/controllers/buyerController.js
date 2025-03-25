@@ -92,4 +92,25 @@ const updateBuyerProfile = async (req, res) => {
     }
 };
 
-module.exports = { buyerSignup, buyerLogin, getBuyerProfile, updateBuyerProfile };
+
+const changeBuyerPassword = async (req, res) => {
+    try {
+        const { password, newPassword } = req.body;
+        const buyer = await Buyer.findById(req.user.id);
+        if (!buyer) return res.status(404).json({ message: "Buyer not found" });
+
+        const isMatch = await bcrypt.compare(password, buyer.password);
+        if (!isMatch) return res.status(400).json({ message: "Incorrect current password" });
+
+        const salt = await bcrypt.genSalt(10);
+        buyer.password = await bcrypt.hash(newPassword, salt);
+        await buyer.save();
+
+        res.status(200).json({ message: "Password updated successfully" });
+    } catch (error) {
+        console.error("Error changing password:", error);
+        res.status(500).json({ message: "Server error" });
+    }
+};
+
+module.exports = { buyerSignup, buyerLogin, getBuyerProfile, updateBuyerProfile, changeBuyerPassword };
