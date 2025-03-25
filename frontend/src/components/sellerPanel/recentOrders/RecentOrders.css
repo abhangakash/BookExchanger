@@ -1,0 +1,18 @@
+.recent-orders {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 50%;
+    color: black;
+}
+
+.recent-orders table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.recent-orders th, .recent-orders td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}

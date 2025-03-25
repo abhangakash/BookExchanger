@@ -1,0 +1,85 @@
+/* Header Container */
+.seller-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 1rem 2rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+/* Logo */
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+.logo h1 span {
+    color: #E74C3C; /* Highlighted 'X' */
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    padding: 0.5rem;
+    border-radius: 20px;
+    width: 250px;
+}
+
+.search-bar input {
+    border: none;
+    background: none;
+    padding-left: 0.5rem;
+    outline: none;
+    width: 100%;
+}
+
+.search-icon {
+    color: #555;
+}
+
+/* Header Right Section */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Notifications */
+.notification-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #2C3E50;
+}
+
+/* Profile */
+.seller-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .seller-header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+}

@@ -1,0 +1,110 @@
+.admin-dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+    /* background-color: #1f2937; */
+    /* overflow-x: hidden; */
+}
+
+/* Main Content Area */
+.admin-dashboard-content {
+    margin-top: 20px;
+    margin-left: 300px; 
+    width: calc(100% - 250px);
+    /* padding: 2rem; */
+    width: 75%;
+    max-width: 1200px;
+    /* align-items: center; */
+}
+
+/* Top Section Container */
+.admin-dashboard-top {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+/* Stats Grid (2 cards per row always on desktop) */
+.admin-stats-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+/* Stat Card */
+.admin-stat-card {
+    background: white;
+    /* padding: 1.5rem; */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.admin-stat-card:hover {
+    transform: scale(1.02);
+}
+
+.admin-stat-card h3 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    text-align: center;
+
+}
+
+.admin-stat-card p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Chart Section */
+.admin-dashboard-middle {
+    width: 100%;
+}
+
+.admin-chart-container {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 96%;
+}
+
+.admin-chart-container h3 {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+/* Color Variants */
+.admin-card-blue {
+    background-color: #e0f2fe;
+}
+.admin-card-green {
+    background-color: #dcfce7;
+}
+.admin-card-yellow {
+    background-color: #fef9c3;
+}
+.admin-card-purple {
+    background-color: #ede9fe;
+}
+
+@media (max-width: 768px) {
+    .admin-dashboard-content {
+        margin-left: 0px !important; /* ✅ Prevent content push */
+        margin-top: 80px;
+        padding: 1rem;
+        width: 90%;       /* Optional: account for mobile navbar */
+    }
+
+    .admin-stats-container {
+        grid-template-columns: 1fr;  /* ✅ Stack stat cards */
+    }
+
+    .admin-chart-container {
+        max-width: 100%;
+        width: 85%;       /* Optional: account for mobile navbar */
+
+    }
+}

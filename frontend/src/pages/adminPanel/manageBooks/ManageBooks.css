@@ -1,0 +1,116 @@
+.admin-manage-books-wrapper {
+    display: flex;
+    width: 99%;
+    min-height: 100vh;
+}
+
+.admin-manage-books-content {
+    /* flex-grow: 1; */
+    /* padding: 2rem; */
+    margin-left: 260px;
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+    /* background-color: #f8f9fa; */
+}
+
+.admin-manage-books-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+}
+
+.admin-manage-books-search {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    background: #ffffff;
+    color: #000;
+}
+
+.admin-books-table-wrapper {
+    overflow-x: auto;
+}
+
+.admin-books-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.admin-books-table th,
+.admin-books-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.admin-books-table th {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.admin-books-table td {
+    font-size: 1rem;
+    color: #333;
+    background-color: white;
+}
+
+.admin-books-delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-books-delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.admin-books-empty-msg {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .admin-manage-books-content {
+        margin-left: 0px !important; /* ✅ Prevent content push */
+        margin-top: 50px;
+        width: 100%;
+        padding: 1rem;
+    }
+    .admin-manage-books-search {
+        width: 94%;
+
+    }
+    .admin-manage-books-title {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .admin-books-table {
+        font-size: 0.9rem;
+    }
+
+    .admin-books-table th,
+    .admin-books-table td {
+        padding: 8px;
+    }
+
+    .admin-books-delete-btn {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}

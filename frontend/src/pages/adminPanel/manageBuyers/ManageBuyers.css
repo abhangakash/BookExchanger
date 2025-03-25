@@ -1,0 +1,110 @@
+.admin-manage-buyers-wrapper {
+    display: flex;
+    width: 99%;
+    min-height: 100vh;
+}
+
+.admin-manage-buyers-content {
+    /* padding: 2rem; */
+    margin-left: 260px;
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+}
+
+.admin-manage-buyers-search {
+    width: 98%;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    background: #ffffff;
+    color: #000;
+}
+
+.admin-buyers-table-wrapper {
+    overflow-x: auto;
+}
+
+.admin-buyers-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+.admin-buyers-table th,
+.admin-buyers-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.admin-buyers-table th {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.admin-buyers-table td {
+    font-size: 1rem;
+    color: #333;
+    background-color: white;
+}
+
+.admin-buyers-block-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-buyers-unblock-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admin-buyers-empty-msg {
+    text-align: center;
+    padding: 20px;
+    color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-manage-buyers-content {
+        margin-left: 0px !important;
+        margin-top: 50px;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .admin-manage-buyers-search {
+        width: 94%;
+    }
+
+    .admin-buyers-table {
+        font-size: 0.9rem;
+    }
+
+    .admin-buyers-table th,
+    .admin-buyers-table td {
+        padding: 8px;
+    }
+
+    .admin-buyers-block-btn,
+    .admin-buyers-unblock-btn {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}

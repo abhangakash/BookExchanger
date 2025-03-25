@@ -1,0 +1,120 @@
+.admin-profile-wrapper {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.admin-profile-content {
+    padding: 2rem;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+}
+
+/* Header Section */
+.admin-profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 10px;
+    justify-content: center;
+    color: #000;
+}
+
+.admin-profile-pic {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #e74c3c;
+    object-fit: cover;
+}
+
+/* Card Layout */
+.admin-profile-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+    color: #000;
+}
+
+.admin-profile-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    
+}
+.admin-profile-card h3{
+    text-align: center;
+}
+
+/* Input Grid */
+.admin-profile-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+    
+}
+
+.admin-profile-grid div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.admin-profile-grid label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+
+}
+
+.admin-profile-grid input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #ccc;
+    color: #000;
+}
+
+/* Buttons */
+.btn-secondary {
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-top: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-secondary:hover {
+    background-color: #2b80c4;
+}
+
+.admin-profile-message {
+    color: green;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-profile-content {
+        margin-left: 0;
+        margin-top: 70px;
+        width: 100%;
+    }
+
+    .admin-profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+}

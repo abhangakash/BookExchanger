@@ -1,0 +1,179 @@
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+}
+
+/* 📌 Reports Page Layout */
+.reports-container {
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 270px;
+    width: calc(100% - 270px);
+    box-sizing: border-box;
+}
+
+/* 📌 Title */
+.reports-container h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* 📌 Date Range Selector */
+.date-range {
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.date-range label {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    color: white;
+}
+
+.date-range select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+/* 📌 Charts Row - Ensures Both Charts Stay in One Line */
+.charts-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 900px;
+    flex-wrap: wrap;
+}
+
+/* 📌 Individual Chart Container */
+.chart-container {
+    flex: 1;
+    min-width: 320px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 📌 Chart Headings */
+.chart-container h3 {
+    font-size: 1.4rem;
+    color: #2C3E50;
+    margin-bottom: 1rem;
+}
+
+/* 📌 Best-Selling Books */
+.best-sellers {
+    width: 100%;
+    max-width: 900px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    color: black;
+}
+
+/* 📌 Best-Sellers Title */
+.best-sellers h3 {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #2C3E50;
+    margin-bottom: 1rem;
+}
+
+/* 📌 Table for Best-Sellers */
+.best-sellers table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* 📌 Table Header and Cells */
+.best-sellers th,
+.best-sellers td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.best-sellers th {
+    background-color: #E74C3C;
+    color: white;
+}
+
+/* 📌 Export Report Button */
+.export-report {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.export-report button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: #E74C3C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.export-report button:hover {
+    background-color: #C0392B;
+}
+
+/* 🟢 Responsive Fixes */
+@media (max-width: 1024px) {
+    .reports-container {
+        width: 100%;
+        margin-left: 0;
+        padding: 1.5rem;
+    }
+
+    .charts-row {
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .chart-container {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .charts-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .chart-container {
+        width: 45%;
+        min-width: 250px;
+    }
+
+    .best-sellers {
+        width: 100%;
+    }
+
+    .date-range {
+        text-align: center;
+        width: 100%;
+    }
+
+    .date-range select {
+        width: 100%;
+        max-width: 300px;
+    }
+}

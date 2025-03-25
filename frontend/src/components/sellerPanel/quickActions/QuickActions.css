@@ -1,0 +1,72 @@
+/* Quick Actions Container */
+.quick-actions {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 45%;
+    /* max-width: 350px; */
+}
+
+/* Quick Actions Heading */
+.quick-actions h3 {
+    font-size: 1.2rem;
+    color: #2C3E50;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Quick Action Buttons */
+.quick-actions button {
+    padding: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Button Variants */
+.quick-actions .btn-primary {
+    background-color: #E74C3C;
+    color: white;
+}
+
+.quick-actions .btn-secondary {
+    background-color: #3498DB;
+    color: white;
+}
+
+.quick-actions .btn-tertiary {
+    background-color: #2ECC71;
+    color: white;
+}
+
+/* Hover Effects */
+.quick-actions .btn-primary:hover {
+    background-color: #C0392B;
+}
+
+.quick-actions .btn-secondary:hover {
+    background-color: #217DBB;
+}
+
+.quick-actions .btn-tertiary:hover {
+    background-color: #27AE60;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .quick-actions {
+        max-width: 100%;
+    }
+}

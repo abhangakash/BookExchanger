@@ -1,0 +1,186 @@
+/* Prevent background from scrolling when modal is open */
+body.modal-open {
+    overflow: hidden;
+}
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden; /* ✅ Prevents background scrolling */
+}
+
+/* Modal Box */
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px; /* ✅ Increased width for desktop */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-height: 100vh; /* ✅ Prevents overflowing */
+    overflow-y: auto; /* ✅ Enables scrolling inside the modal */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Two-Column Grid for Desktop */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* ✅ Two columns */
+    gap: 15px;
+    width: 100%;
+}
+
+/* Ensure Single Column for Mobile */
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr; /* ✅ Single column */
+    }
+}
+
+/* Fix for modal scrolling inside mobile view */
+@media (max-width: 768px) {
+    .modal {
+        align-items: flex-start; /* Move modal a little down */
+        padding-top: 60px;
+    }
+
+    .modal-content {
+        max-height: 85vh; /* Prevent modal from getting too tall */
+        overflow-y: auto; /* ✅ Enables scrolling inside the modal */
+    }
+}
+
+/* Form Inputs */
+.modal-content input,  
+.modal-content select, 
+.modal-content textarea {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #fff;
+    color: black;
+    text-align: left;
+}
+
+/* Ensure Textarea Matches Input Size */
+.modal-content textarea {
+    height: 48px; /* ✅ Same height as input fields */
+    resize: none;
+    width: 90%;
+}
+
+/* Sticky Footer (Fix Overlapping Buttons) */
+.modal-footer {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary, .btn-close {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+}
+
+.btn-primary { 
+    background: #007bff; 
+    color: white; 
+}
+
+.btn-secondary { 
+    background: #6c757d; 
+    color: white; 
+}
+
+.btn-close { 
+    background: #dc3545; 
+    color: white; 
+}
+
+/* Align radio buttons with labels */
+.checkbox-group {
+    display: flex;
+    gap: 20px;
+    width: 30%;
+    text-align: left;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 30px;
+    gap: 5px; 
+    margin: 0;
+    white-space: nowrap;
+}
+/* Image Preview Styles */
+.image-preview {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.image-item {
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.image-item button {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+
+
+/* ✅ Prevent background scrolling when modal is open */
+@media (max-width: 768px) {
+    body.modal-open {
+        overflow: hidden;
+    }
+
+    .modal-content {
+        max-height: 80vh;
+        overflow-y: auto;
+    }
+}

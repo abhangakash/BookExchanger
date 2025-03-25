@@ -1,0 +1,143 @@
+/* Navbar Container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    background-color: #E74C3C; /* Red-orange background */
+    color: white;
+    border-radius: 20px;
+    position: relative; /* Ensures dropdown is positioned relative to navbar */
+}
+
+/* Logo and Title */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-title .highlight {
+    color: #3498DB; /* Blue color for the 'X' */
+}
+
+/* Navbar Links */
+.navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.navbar-links a:hover {
+    color: #F1C40F; /* Hover effect */
+}
+
+/* Navbar Buttons */
+.navbar-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-signup {
+    background-color: white;
+    color: #E74C3C;
+    border: 2px solid white;
+}
+
+.btn-signup:hover {
+    background-color: #E74C3C;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-sell {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-sell:hover {
+    background-color: white;
+    color: #E74C3C;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Responsive Navbar for Smaller Screens */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Show hamburger menu on smaller screens */
+    }
+
+    .navbar-links {
+        position: absolute;
+        top: 100%; /* Dropdown below navbar */
+        left: 50%; /* Center the dropdown horizontally */
+        transform: translateX(-50%) translateY(-320%);
+        background-color: #E74C3C; /* Same background as navbar */
+        flex-direction: column; /* Stack links vertically */
+        gap: 1rem; /* Add spacing between links */
+        padding: 1rem;
+        border-radius: 20px; /* Rounded corners */
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        width: 85%; /* Adjust width for proper alignment */
+        z-index: 10;
+        opacity: 0; /* Hidden by default */
+        pointer-events: none; /* Prevent interaction when hidden */
+    }
+
+    .navbar-links.active {
+        transform: translateX(-50%) translateY(0); /* Slide down menu when active */
+        opacity: 1; /* Make dropdown visible */
+        pointer-events: auto; /* Enable interaction */
+    }
+
+    .navbar-links li {
+        text-align: center; /* Center-align dropdown items */
+    }
+
+    .navbar-buttons {
+        display: none; /* Hide buttons outside the dropdown */
+    }
+}

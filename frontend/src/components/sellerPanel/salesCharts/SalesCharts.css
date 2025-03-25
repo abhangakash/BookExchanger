@@ -1,0 +1,47 @@
+/* Sales Chart Wrapper */
+.sales-chart {
+    width: 45%;
+    /* max-width: 750px; */
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    align-self: center;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Chart Title */
+.sales-chart h2 {
+    font-size: 1.4rem;
+    color: #2C3E50;
+    margin-bottom: 1rem;
+}
+
+/* Chart Container */
+.sales-chart canvas {
+    width: 100% !important;
+    height: 250px !important; /* Force a fixed height */
+    max-height: 250px;
+    display: block;
+}
+
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+    .sales-chart {
+        width: 80%;
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sales-chart {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .sales-chart canvas {
+        height: 200px !important;
+        max-height: 200px;
+    }
+}

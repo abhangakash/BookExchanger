@@ -1,0 +1,129 @@
+/* Modal Background */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Modal Content Box */
+.modal-content {
+    background: white;
+    padding: 10px 80px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Modal Header */
+.modal-content h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Input Fields */
+.modal input {
+    width: 90%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #f9f9f9;
+    color: #333;
+}
+
+/* Checkbox Label */
+.modal label {
+    /* display: flex; */
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 14px;
+    color: #555;
+    /* margin: 10px 0; */
+    gap: 0;
+}
+
+.modal label input {
+    margin-right: 8px;
+    transform: scale(1.2);
+   
+}
+
+/* Buttons */
+.modal button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Fix Checkbox & Label Spacing (No Gap) */
+.tick-label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #555;
+    gap: 0px; /* ✅ Ensures no extra space */
+    white-space: nowrap; /* ✅ Prevents wrapping */
+}
+
+/* Fix Checkbox Size */
+.tick-label span{
+    margin-right: 250px; /* ✅ Removes any default margin */
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+/* Update Button */
+.modal button[type="submit"] {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+.modal button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* Cancel Button */
+.modal button[type="button"] {
+    background: #6c757d;
+    color: white;
+}
+
+.modal button[type="button"]:hover {
+    background: #5a6268;
+}
+
+/* Responsive Design for Mobile */
+/* Responsive Design for Mobile */
+@media screen and (max-width: 480px) {
+    .modal-content {
+        width: 90%;
+        padding: 15px;
+        margin: 0 10px; /* ✅ Ensure margin on small screens */
+    }
+
+    .modal input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .modal button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}

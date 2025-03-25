@@ -1,0 +1,97 @@
+/* Buyer Navbar Container */
+.buyer-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    background-color: #E74C3C; /* Red-orange background */
+    color: white;
+    border-radius: 20px;
+    position: relative; /* Ensures dropdown is positioned relative to navbar */
+}
+
+/* Logo and Title */
+.buyer-navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.buyer-navbar-logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.buyer-navbar-logo .highlight {
+    color: #3498DB; /* Blue color for the 'X' */
+}
+
+/* Navbar Links */
+.buyer-navbar-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.buyer-navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.buyer-navbar-links a:hover {
+    color: #F1C40F; /* Hover effect */
+}
+
+/* Hamburger Menu */
+.buyer-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.buyer-hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Responsive Navbar for Smaller Screens */
+@media (max-width: 768px) {
+    .buyer-hamburger {
+        display: flex; /* Show hamburger menu on smaller screens */
+    }
+
+    .buyer-navbar-links {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-320%);
+        background-color: #E74C3C;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 20px;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        width: 85%;
+        z-index: 10;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .buyer-navbar-links.active {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .buyer-navbar-links li {
+        text-align: center;
+    }
+}

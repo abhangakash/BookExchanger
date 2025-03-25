@@ -1,0 +1,149 @@
+.buyer-chats-container {
+    padding: 20px;
+    margin: auto;
+    /* max-width: 800px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ✅ Centers content */
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+/* .chat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+} */
+
+.chat-item:hover {
+    transform: scale(1.03);
+}
+
+.book-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.chat-details {
+    flex: 1;
+}
+
+.chat-details h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.chat-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+/* Unread Message Badge */
+/* Unread Message Badge (Always Visible) */
+/* Navbar Unread Badge */
+.unread-badge {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 8px;
+    border-radius: 50%;
+    display: inline-block;
+    min-width: 20px;
+    min-height: 20px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+/* Chat Card Unread Badge */
+.chat-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.unread-badge {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+
+
+/* 📱 Mobile Styles */
+@media screen and (max-width: 768px) {
+    .buyer-chats-container {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .chat-item {
+        padding: 8px;
+    }
+
+    .book-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .chat-details h3 {
+        font-size: 14px;
+    }
+
+    .chat-details p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .buyer-chats-container {
+        padding: 5px;
+    }
+
+    .chat-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .book-image {
+        width: 45px;
+        height: 45px;
+    }
+
+    .chat-details h3 {
+        font-size: 13px;
+    }
+
+    .chat-details p {
+        font-size: 11px;
+    }
+}

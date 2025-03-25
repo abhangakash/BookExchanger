@@ -1,0 +1,206 @@
+/* Seller Dashboard Layout */
+.seller-dashboard {
+    display: flex;
+    min-height: 100vh;
+    /* background-color: #f8f9fa; */
+    background-color: #2C3E50;
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+}
+
+/* Sidebar Handling */
+.dashboard-content {
+    flex-grow: 1;
+    padding: 2rem;
+    margin-left: 270px; /* Match sidebar width */
+    width: calc(100% - 250px);
+    transition: margin-left 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Top Section */
+.dashboard-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* Middle Section */
+.dashboard-middle {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* gap: 1.5rem; */
+}
+
+/* Bottom Section */
+.dashboard-bottom {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Stats Section */
+.stats-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+/* Stat Cards */
+.stat-card {
+    flex: 1;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    min-width: 200px;
+}
+
+.stat-card h3 {
+    font-size: 1.1rem;
+    color: #2C3E50;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #E74C3C;
+}
+
+/* Sales Charts */
+.chart-container {
+    flex: 1;
+    max-width: 60%;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Quick Actions Section */
+/* .quick-actions {
+    flex: 1;
+    max-width: 35%;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.quick-actions h3 {
+    font-size: 1.2rem;
+    color: #2C3E50;
+    margin-bottom: 1rem;
+}
+
+.quick-actions button {
+    padding: 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+}
+
+.quick-actions .btn-primary {
+    background-color: #E74C3C;
+    color: white;
+}
+
+.quick-actions .btn-secondary {
+    background-color: #3498DB;
+    color: white;
+}
+
+.quick-actions .btn-tertiary {
+    background-color: #2ECC71;
+    color: white;
+} */
+
+/* Recent Orders */
+.recent-orders {
+    width: 100%;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.recent-orders h3 {
+    font-size: 1.2rem;
+    color: #2C3E50;
+    margin-bottom: 1rem;
+}
+
+.recent-orders table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.recent-orders th,
+.recent-orders td {
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.recent-orders th {
+    text-align: left;
+    background-color: #E74C3C;
+    color: white;
+}
+
+.recent-orders td {
+    text-align: left;
+    background: white;
+}
+
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+    .dashboard-content {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .dashboard-top,
+    .dashboard-middle,
+    .dashboard-bottom {
+        /* flex-direction: column; */
+        gap: 1rem;
+    }
+
+    .stats-container {
+        justify-content: center;
+    }
+
+    .chart-container,
+    .quick-actions {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-content {
+        padding: 1rem;
+        margin-top: 80px;
+    }
+
+    .chart-container {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .quick-actions {
+        width: 100%;
+        max-width: 400px;
+    }
+}

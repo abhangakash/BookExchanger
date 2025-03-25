@@ -1,0 +1,130 @@
+/* Profile Container */
+.buyer-profile {
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+/* Profile Header - Centered */
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #E74C3C;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Profile Sections Layout */
+.profile-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.profile-card {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Profile Grid for Input Fields */
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.profile-grid div {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* ✅ Ensure Input Fields & Buttons Have the Same Size */
+.profile-card input,
+.profile-card select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #FFF;
+    color: black;
+    box-sizing: border-box;
+}
+
+/* Disable input field styling */
+.profile-card input[disabled] {
+    background: #a4a3a3;
+    cursor: not-allowed;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #E74C3C;
+    color: white;
+    border: none;
+    margin-top: 15px;
+}
+
+.btn-secondary {
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    margin-top: 15px;
+}
+
+.btn-danger {
+    background-color: #C0392B;
+    color: white;
+    border: none;
+    margin-top: 15px;
+}
+
+/* Danger Section */
+.danger {
+    background: #ffe5e5;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .buyer-profile {
+        margin-top: 100px;
+    }
+    
+    .profile-container {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-pic {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-card input,
+    .profile-card select,
+    .profile-card button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,111 @@
+/* Orders Page Container */
+.my-orders {
+    padding: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Title */
+.my-orders h2 {
+    font-size: 2rem;
+    color: #2C3E50;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+}
+
+/* Orders Grid */
+.orders-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
+    width: 90%;
+    justify-content: center;
+}
+
+/* Order Card */
+.order-card {
+    background: #2C3E50;
+    color: white;
+    border-radius: 10px;
+    border: white 1px solid;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    height: auto; /* ✅ Auto height to keep all equal */
+    min-height: 450px; /* ✅ Ensures consistent height */
+}
+
+/* Hover Effect */
+.order-card:hover {
+    transform: scale(1.02);
+}
+
+/* Book Image */
+.book-image {
+    width: 100%;
+    max-width: 150px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Order Status */
+.status {
+    font-weight: bold;
+    padding: 0.4rem 0.6rem;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Status Colors */
+.status.pending {
+    background-color: #f1c40f;
+    color: black;
+}
+
+.status.shipped {
+    background-color: #3498db;
+    color: white;
+}
+
+.status.delivered {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.status.cancelled {
+    background-color: #e74c3c;
+    color: white;
+}
+
+/* Check Order Chat Button */
+.chat-btn {
+    background-color: #E74C3C;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.3s ease;
+}
+
+.chat-btn:hover {
+    background-color: #C0392B;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+    .orders-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
