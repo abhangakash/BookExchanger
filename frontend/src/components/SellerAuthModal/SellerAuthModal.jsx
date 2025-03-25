@@ -60,8 +60,10 @@ const SellerAuthModal = ({ isOpen, onClose }) => {
                 localStorage.setItem("token", response.token);
             }
     
-            // ✅ Redirect seller to dashboard after successful login/signup
-            navigate("/seller/dashboard");
+            // ✅ Redirect seller to dashboard after successful login
+            if (isLogin) {
+                navigate("/seller/dashboard");
+            }
     
         } catch (error) {
             console.error("Login Error:", error);
