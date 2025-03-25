@@ -29,7 +29,7 @@ app.use(express.json());
 
 const allowedOrigins = [
     "http://localhost:5173",
-    "https://bookexchanger-west.onrender.com"
+    "https://bookexchanger-zwks.onrender.com"
   ];
   
   app.use(cors({
