@@ -10,7 +10,7 @@ const QuickActions = () => {
     return (
         <div className="quick-actions">
             <h3>Quick Actions</h3>
-            <button className="btn-primary" onClick={() => setShowModal(true)}>➕ Add New Book</button>
+            <button className="btn-primary" onClick={() => setShowModal(true)}>➕ Add Book</button>
             <button className="btn-secondary" onClick={() => navigate("/seller/orders")}>📦 View Orders</button>
             <button className="btn-tertiary" onClick={() => navigate("/seller/reports")}>📊 View Reports</button>
 
