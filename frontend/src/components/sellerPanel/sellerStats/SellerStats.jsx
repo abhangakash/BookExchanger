@@ -14,7 +14,13 @@ const SellerStats = () => {
         try {
             const response = await getSellerDashboardStats();
             console.log("📊 Seller Stats Response:", response); // ✅ Debugging Log
-            setStats(response);
+            // setStats(response);
+            setStats({
+                totalSales: response?.totalSales ?? 0,
+                totalRevenue: response?.totalRevenue ?? 0,
+                booksSold: response?.booksSold ?? 0,
+                totalBooksListed: response?.totalBooksListed ?? 0
+            });
         } catch (error) {
             console.error("Error fetching seller stats:", error);
         } finally {
