@@ -1,0 +1,26 @@
+<svg
+  width="200"
+  height="200"
+  viewBox="0 0 200 200"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Book Icon -->
+  <rect x="50" y="40" width="100" height="120" rx="10" ry="10" fill="#D32F2F" />
+  <line x1="50" y1="50" x2="150" y2="50" stroke="#FFF" stroke-width="4" />
+  <line x1="50" y1="60" x2="150" y2="60" stroke="#FFF" stroke-width="4" />
+
+  <!-- Exchange Arrows -->
+  <polygon points="70,110 90,110 80,100" fill="#FFF" />
+  <polygon points="130,90 110,90 120,100" fill="#FFF" />
+  <line x1="80" y1="100" x2="120" y2="100" stroke="#FFF" stroke-width="4" />
+
+  <!-- Shopping Cart -->
+  <circle cx="75" cy="170" r="7" fill="#FFF" />
+  <circle cx="125" cy="170" r="7" fill="#FFF" />
+  <path d="M55 150 H140 L150 120 H60 Z" fill="#FFF" />
+  
+  <!-- Text -->
+  <text x="50" y="190" font-family="Arial" font-size="16" fill="#D32F2F" font-weight="bold">
+  
+  </text>
+</svg>
