@@ -3,10 +3,10 @@ import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import "./AboutUs.css"; // Add your styles here
 // ✅ Import team member images
-import TeamImg from "../../assets/TeamImg1.jpg";
- import TeamImg from "../../assets/TeamImg2.jpg";
- import TeamImg from "../../assets/TeamImg3.jpg";
- import TeamImg from "../../assets/TeamImg4.jpg";
+import TeamImg1 from "../../assets/TeamImg1.jpg";
+ import TeamImg2 from "../../assets/TeamImg2.jpg";
+ import TeamImg3 from "../../assets/TeamImg3.jpg";
+ import TeamImg4 from "../../assets/TeamImg4.jpg";
 
 const teamMembers = [
     {
