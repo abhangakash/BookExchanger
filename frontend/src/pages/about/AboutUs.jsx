@@ -3,31 +3,31 @@ import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import "./AboutUs.css"; // Add your styles here
 // ✅ Import team member images
-import TeamImg from "../../assets/TeamImg.jpg";
-// import TeamImg from "../../assets/TeamImg.jpg";
-// import TeamImg from "../../assets/TeamImg.jpg";
-// import TeamImg from "../../assets/TeamImg.jpg";
+import TeamImg from "../../assets/TeamImg1.jpg";
+ import TeamImg from "../../assets/TeamImg2.jpg";
+ import TeamImg from "../../assets/TeamImg3.jpg";
+ import TeamImg from "../../assets/TeamImg4.jpg";
 
 const teamMembers = [
     {
-        name: "FirstName LastName",
-        role: "Founder & Full Stack Developer",
-        image: TeamImg,
+        name: "Pratiksha Bhoite",
+        role: "Full Stack Developer",
+        image: TeamImg1,
     },
     {
-        name: "FirstName LastName",
-        role: "UI/UX Designer",
-        image: TeamImg,
+        name: "Rohit Gandhi",
+        role: "ML Engineer",
+        image: TeamImg2,
     },
     {
-        name: "FirstName LastName",
+        name: "Sudarshan Bhosale",
+        role: "Frontend Engineer",
+        image: TeamImg3,
+    },
+    {
+        name: "Akash Abhang",
         role: "Backend Engineer",
-        image: TeamImg,
-    },
-    {
-        name: "FirstName LastName",
-        role: "Marketing & Growth",
-        image: TeamImg,
+        image: TeamImg4,
     },
 ];
 
