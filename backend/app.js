@@ -28,7 +28,7 @@ app.use(express.json());
 
 
 const allowedOrigins = [
-    "www.bookxchanger.shop",
+    "https://www.bookxchanger.shop",
     "http://localhost:5173",
     "https://bookexchanger-zwks.onrender.com"
   ];
